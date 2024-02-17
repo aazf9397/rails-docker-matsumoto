@@ -12,7 +12,7 @@ jobs:
       - checkout:
           path: ~/rails-docker-matsumoto
       - ruby/install-deps
-      -   name: yarn&nodejs
+      - name: yarn&nodejs
           command: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
           command: echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
           command: apt-get update -qq
