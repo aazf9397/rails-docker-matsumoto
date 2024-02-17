@@ -12,15 +12,6 @@ jobs:
       - checkout:
           path: ~/rails-docker-matsumoto
       - ruby/install-deps
-      - run:
-          name: yarn nodejs
-          command: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-      - run:
-          name: webpack install
-          command: bundle exec rails webpacker:install
-      - run:
-          name: webpack compile
-          command: bundle exec rails webpacker:compile
   
   test:
     docker:
