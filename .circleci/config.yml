@@ -58,6 +58,9 @@ jobs:
       - run:
           name: database setup
           command: heroku run bundle exec rake db:migrate RAILS_ENV=production -a $HEROKU_APP_NAME
+      - run:
+          name: webpack compile
+          command: bundle exec rake webpacker:compile
 
 workflows:
   version: 2
